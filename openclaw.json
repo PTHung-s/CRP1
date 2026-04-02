@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-31T07:35:54.990Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-31T07:35:54.891Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/auto",
+        "fallbacks": [
+          "google/gemini-2.5-flash",
+          "vercel-ai-gateway/minimax/minimax-m2.5"
+        ]
+      },
+      "models": {
+        "google/gemini-2.5-flash": {},
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "vercel-ai-gateway/minimax/minimax-m2.5": {}
+      },
+      "workspace": "C:\\Users\\PC\\.openclaw\\workspace",
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "tools": {
+    "profile": "full",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "gemini",
+        "gemini": {
+          "apiKey": "AIzaSyCaJ2JtVh1zNNMzU8PKBJ92I_lgXCBp0nY"
+        }
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "8724153133:AAH6v3Nw5_4VVhayhAjay120l8Y7RZlCDks",
+      "allowFrom": ["6895376965"],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "063f6b8bb5d1631e5ff55a967228630b1552872ecf9198a6b371ef4bb3da8835"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "skills": {
+    "entries": {
+      "nano-banana-pro": {
+        "apiKey": "AIzaSyCaJ2JtVh1zNNMzU8PKBJ92I_lgXCBp0nY"
+      },
+      "canvas-lms": {
+        "enabled": true,
+        "config": {
+          "canvasApiToken": "",
+          "canvasBaseUrl": "https://vinuni.instructure.com",
+          "timeeditUrl": "https://cloud.timeedit.net/your/ics/url.ics"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

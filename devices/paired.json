@@ -1,0 +1,67 @@
+{
+  "ad7bda3da28d71671a26e245965e6ec5bb1bed6eead643a7e3ab7ee1c5356ba9": {
+    "deviceId": "ad7bda3da28d71671a26e245965e6ec5bb1bed6eead643a7e3ab7ee1c5356ba9",
+    "publicKey": "cIvhd8z0bw4R3t-5H6lchJNLx6SDcXD-juIGIwM7i1w",
+    "platform": "win32",
+    "clientId": "openclaw-probe",
+    "clientMode": "probe",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.read"
+    ],
+    "approvedScopes": [
+      "operator.read"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "CyPRlP_lgMAxtEaZF-DFCxkG85dZiPXJfGINlUVGHCU",
+        "role": "operator",
+        "scopes": [
+          "operator.read"
+        ],
+        "createdAtMs": 1773514871121
+      }
+    },
+    "createdAtMs": 1773514871121,
+    "approvedAtMs": 1773514871121
+  },
+  "18fac56540f9396873eed7a216286a690eb11d00079bb8844967a16c8c03013d": {
+    "deviceId": "18fac56540f9396873eed7a216286a690eb11d00079bb8844967a16c8c03013d",
+    "publicKey": "qFBSAccxn0heq0mibOUncvq61xQd_G12FIOu7BdAVBM",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "Y4eiPV_BqK33OyL7oKp5qmAmMshM7XpYBZAEQxynk9s",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1773514959250,
+        "lastUsedAtMs": 1775132215803
+      }
+    },
+    "createdAtMs": 1773514959250,
+    "approvedAtMs": 1773514959250
+  }
+}

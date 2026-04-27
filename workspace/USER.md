@@ -2,11 +2,11 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** User
+- **What to call them:** You
 - **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Timezone:** Asia/Ho_Chi_Minh
+- **Notes:** No special notes.
 
 ## Context
 

@@ -11,6 +11,12 @@
   },
   "auth": {
     "profiles": {
+      "openai:deepseek": {
+        "provider": "openai",
+        "mode": "api_key",
+        "apiKey": "YOUR_DEEPSEEK_API_KEY",
+        "baseUrl": "https://api.deepseek.com/v1"
+      },
       "google:default": {
         "provider": "google",
         "mode": "api_key"
@@ -24,23 +30,16 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openrouter/auto",
-        "fallbacks": [
-          "google/gemini-2.5-flash",
-          "vercel-ai-gateway/minimax/minimax-m2.5"
-        ]
+        "primary": "openai:deepseek/deepseek-chat"
       },
       "models": {
-        "google/gemini-2.5-flash": {},
-        "openrouter/auto": {
-          "alias": "OpenRouter"
-        },
-        "vercel-ai-gateway/minimax/minimax-m2.5": {}
+        "openai:deepseek/deepseek-chat": {}
       },
-      "workspace": "C:\\Users\\PC\\.openclaw\\workspace",
+      "workspace": "./workspace",
       "compaction": {
         "mode": "safeguard"
-      }
+      },
+      "instructions": "./agents/main/agent/instructions.md"
     }
   },
   "tools": {
@@ -50,7 +49,7 @@
         "enabled": true,
         "provider": "gemini",
         "gemini": {
-          "apiKey": "AIzaSyCaJ2JtVh1zNNMzU8PKBJ92I_lgXCBp0nY"
+          "apiKey": "YOUR_GEMINI_API_KEY"
         }
       }
     }
@@ -66,12 +65,16 @@
   },
   "channels": {
     "telegram": {
-      "enabled": true,
+      "enabled": false,
       "dmPolicy": "allowlist",
-      "botToken": "8724153133:AAH6v3Nw5_4VVhayhAjay120l8Y7RZlCDks",
-      "allowFrom": ["6895376965"],
+      "botToken": "YOUR_TELEGRAM_BOT_TOKEN",
+      "allowFrom": [
+        "YOUR_TELEGRAM_USER_ID"
+      ],
       "groupPolicy": "allowlist",
-      "streaming": "partial"
+      "streaming": {
+        "mode": "final"
+      }
     }
   },
   "gateway": {
@@ -80,7 +83,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "063f6b8bb5d1631e5ff55a967228630b1552872ecf9198a6b371ef4bb3da8835"
+      "token": "YOUR_GATEWAY_TOKEN"
     },
     "tailscale": {
       "mode": "off",
@@ -101,12 +104,12 @@
   "skills": {
     "entries": {
       "nano-banana-pro": {
-        "apiKey": "AIzaSyCaJ2JtVh1zNNMzU8PKBJ92I_lgXCBp0nY"
+        "apiKey": "YOUR_NANO_BANANA_API_KEY"
       },
       "canvas-lms": {
         "enabled": true,
         "config": {
-          "canvasApiToken": "",
+          "canvasApiToken": "YOUR_CANVAS_API_TOKEN",
           "canvasBaseUrl": "https://vinuni.instructure.com",
           "timeeditUrl": "https://cloud.timeedit.net/your/ics/url.ics"
         }
@@ -117,6 +120,9 @@
     "entries": {
       "telegram": {
         "enabled": true
+      },
+      "bonjour": {
+        "enabled": false
       }
     }
   }

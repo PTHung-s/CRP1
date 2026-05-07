@@ -1,3 +1,9 @@
+# OpenClaw config (contains plaintext secrets - DO NOT COMMIT)
+openclaw.json
+
+# Environment sample (safe to commit)
+!.env.sample
+
 # Private config backups
 openclaw.json.bak*
 *.bak
@@ -15,11 +21,25 @@ agents/main/sessions/
 agents/main/agent/models.json
 agents/main/agent/models.json.bak
 
+# Gateway runtime state (auto-generated)
+devices/
+identity/
+delivery-queue/
+telegram/
+completions/
+tasks/
+cron/
+
 # Environment files with secrets
 .env
 *.env
+!.env.sample
 
 # Workspace personal files
 workspace/memory/
 workspace/state/
-workspace/.openclaw/workspace-state.json
+workspace/.openclaw/
+workspace/downloads/
+
+# Other runtime state
+config.yaml

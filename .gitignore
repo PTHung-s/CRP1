@@ -17,9 +17,8 @@ update-check.json
 # Session data (contains conversation history)
 agents/main/sessions/
 
-# Private runtime files
-agents/main/agent/models.json
-agents/main/agent/models.json.bak
+# Agent config (may contain secrets)
+agents/agent/
 
 # Gateway runtime state (auto-generated)
 devices/
